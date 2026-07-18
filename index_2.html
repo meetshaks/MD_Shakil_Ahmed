@@ -1,0 +1,555 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>MD. Shakil Ahmed— Portfolio</title>
+
+
+<link rel="icon" href="data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20viewBox%3D%220%200%20100%20100%22%3E%3Cdefs%3E%3ClinearGradient%20id%3D%22g%22%20x1%3D%220%22%20y1%3D%220%22%20x2%3D%221%22%20y2%3D%221%22%3E%3Cstop%20offset%3D%220%22%20stop-color%3D%22%236366f1%22/%3E%3Cstop%20offset%3D%221%22%20stop-color%3D%22%23ec4899%22/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect%20width%3D%22100%22%20height%3D%22100%22%20rx%3D%2224%22%20fill%3D%22url%28%23g%29%22/%3E%3Ctext%20x%3D%2250%22%20y%3D%2260%22%20font-family%3D%22Georgia%2C%20Times%20New%20Roman%2C%20serif%22%20font-size%3D%22100%22%20font-weight%3D%22900%22%20font-style%3D%22italic%22%20fill%3D%22white%22%20text-anchor%3D%22middle%22%20dominant-baseline%3D%22middle%22%3ES%3C/text%3E%3C/svg%3E">
+
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+
+
+
+<link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700&family=Manrope:wght@400;500;600&display=swap" rel="stylesheet">
+<script src="https://code.iconify.design/iconify-icon/1.0.7/iconify-icon.min.js"></script>
+<style>
+*,*::before,*::after{margin:0;padding:0;box-sizing:border-box}
+:root{--bg:#e6e9ef;--text-primary:#3a4256;--text-secondary:#6b7488;--dark-shadow:#c5cad6;--light-shadow:#ffffff;--accent-1:#7c83ff;--accent-2:#ff8fb1;--card-radius:22px;--small-radius:14px;--pill-radius:30px;--ease:cubic-bezier(.22,.61,.36,1);--section-pad:70px}
+[data-theme="dark"]{--bg:#2b2f3a;--text-primary:#e6e9ef;--text-secondary:#aab2c5;--dark-shadow:#121419;--light-shadow:#484f66}
+html{scroll-behavior:smooth}
+body{font-family:'Manrope',sans-serif;background:var(--bg);color:var(--text-primary);transition:background .5s var(--ease),color .5s var(--ease);overflow-x:hidden;line-height:1.7}
+h1,h2,h3,h4,h5,h6{font-family:'Outfit',sans-serif;letter-spacing:-0.025em;line-height:1.2}
+a{color:inherit;text-decoration:none}
+
+nav{position:fixed;top:0;left:0;right:0;z-index:100;padding:16px 24px;display:flex;align-items:center;justify-content:center;transition:padding .4s var(--ease)}
+.nav-bar{display:flex;align-items:center;justify-content:space-between;width:100%;max-width:1080px;padding:10px 12px 10px 24px;border-radius:60px;background:var(--bg);box-shadow:8px 8px 20px var(--dark-shadow),-8px -8px 20px var(--light-shadow),inset 0 1px 0 var(--light-shadow);transition:box-shadow .4s var(--ease),max-width .4s var(--ease)}
+nav.scrolled .nav-bar{max-width:960px;box-shadow:6px 6px 16px var(--dark-shadow),-6px -6px 16px var(--light-shadow),inset 0 1px 0 var(--light-shadow)}
+.nav-logo-area{display:flex;align-items:center;gap:10px;flex-shrink:0}
+.nav-avatar{width:36px;height:36px;border-radius:50%;object-fit:cover;border:2px solid transparent;background-origin:border-box;background-clip:padding-box,border-box;background-image:linear-gradient(var(--bg),var(--bg)),linear-gradient(135deg,var(--accent-1),var(--accent-2));box-shadow:2px 2px 6px var(--dark-shadow),-2px -2px 6px var(--light-shadow);transition:transform .3s var(--ease)}
+.nav-avatar:hover{transform:scale(1.1)}
+.nav-logo{font-family:'Outfit',sans-serif;font-size:1.35rem;font-weight:700;letter-spacing:-0.03em;display:flex;align-items:center;gap:2px;user-select:none}
+.nav-logo .logo-dot{display:inline-block;width:8px;height:8px;border-radius:50%;background:linear-gradient(135deg,var(--accent-1),var(--accent-2));margin-left:1px;margin-bottom:6px}
+.nav-links{display:flex;align-items:center;gap:4px;list-style:none}
+.nav-links a{position:relative;padding:8px 16px;font-size:.78rem;font-weight:500;letter-spacing:.03em;color:var(--text-secondary);border-radius:24px;transition:color .3s var(--ease),background .3s var(--ease),box-shadow .3s var(--ease);white-space:nowrap}
+.nav-links a:hover{color:var(--text-primary);background:var(--bg);box-shadow:3px 3px 8px var(--dark-shadow),-3px -3px 8px var(--light-shadow)}
+.nav-links a.active{color:#fff;background:linear-gradient(135deg,var(--accent-1),var(--accent-2));box-shadow:2px 2px 8px color-mix(in srgb,var(--accent-1) 40%,transparent);font-weight:600}
+.nav-right{display:flex;align-items:center;gap:8px;flex-shrink:0}
+.theme-toggle{width:40px;height:40px;border-radius:50%;border:none;cursor:pointer;display:flex;align-items:center;justify-content:center;font-size:1rem;background:var(--bg);box-shadow:inset 3px 3px 7px var(--dark-shadow),inset -3px -3px 7px var(--light-shadow);transition:box-shadow .25s var(--ease),transform .25s var(--ease);color:var(--text-primary)}
+.theme-toggle:hover{box-shadow:inset 2px 2px 5px var(--dark-shadow),inset -2px -2px 5px var(--light-shadow)}
+.theme-toggle:active{transform:scale(.9)}
+.nav-cta{display:inline-flex;align-items:center;gap:6px;padding:9px 20px;background:linear-gradient(135deg,var(--accent-1),var(--accent-2));color:#fff;font-family:'Outfit',sans-serif;font-weight:600;font-size:.78rem;border-radius:24px;border:none;cursor:pointer;transition:transform .25s var(--ease),box-shadow .25s var(--ease);box-shadow:2px 2px 10px color-mix(in srgb,var(--accent-1) 30%,transparent)}
+.nav-cta:hover{transform:scale(1.03);box-shadow:3px 3px 14px color-mix(in srgb,var(--accent-1) 40%,transparent)}
+.nav-cta:active{transform:scale(.96)}
+.mobile-menu-btn{display:none;width:40px;height:40px;border-radius:50%;border:none;cursor:pointer;background:var(--bg);box-shadow:inset 3px 3px 7px var(--dark-shadow),inset -3px -3px 7px var(--light-shadow);color:var(--text-primary);font-size:1.1rem;align-items:center;justify-content:center;transition:transform .25s var(--ease)}
+.mobile-menu-btn:active{transform:scale(.9)}
+.nav-mobile-overlay{display:none;position:fixed;top:0;left:0;right:0;bottom:0;background:var(--bg);z-index:200;flex-direction:column;align-items:center;justify-content:center;gap:8px;opacity:0;transition:opacity .35s var(--ease)}
+.nav-mobile-overlay.open{display:flex;opacity:1}
+.nav-mobile-overlay .mobile-avatar{width:80px;height:80px;border-radius:50%;object-fit:cover;border:3px solid transparent;background-origin:border-box;background-clip:padding-box,border-box;background-image:linear-gradient(var(--bg),var(--bg)),linear-gradient(135deg,var(--accent-1),var(--accent-2));margin-bottom:16px}
+.nav-mobile-overlay .mobile-name{font-family:'Outfit',sans-serif;font-size:1.1rem;font-weight:600;margin-bottom:24px;color:var(--text-primary)}
+.nav-mobile-overlay a{font-family:'Outfit',sans-serif;font-size:1.3rem;font-weight:600;letter-spacing:-0.02em;color:var(--text-secondary);padding:10px 32px;border-radius:var(--pill-radius);transition:color .25s var(--ease),background .25s var(--ease)}
+.nav-mobile-overlay a:hover{color:var(--text-primary);background:color-mix(in srgb,var(--dark-shadow) 30%,transparent)}
+.nav-close{position:absolute;top:24px;right:24px;width:44px;height:44px;border:none;cursor:pointer;background:var(--bg);border-radius:50%;box-shadow:5px 5px 12px var(--dark-shadow),-5px -5px 12px var(--light-shadow);color:var(--text-primary);font-size:1.2rem;display:flex;align-items:center;justify-content:center;transition:transform .25s var(--ease)}
+.nav-close:active{transform:scale(.9)}
+.nav-mobile-overlay .mobile-cta{margin-top:20px;padding:14px 36px;background:linear-gradient(135deg,var(--accent-1),var(--accent-2));color:#fff;font-family:'Outfit',sans-serif;font-weight:600;font-size:1rem;border-radius:var(--pill-radius);border:none;cursor:pointer;box-shadow:3px 3px 12px color-mix(in srgb,var(--accent-1) 30%,transparent)}
+
+#cursor-glow{position:fixed;width:380px;height:380px;border-radius:50%;pointer-events:none;z-index:9999;background:radial-gradient(circle,rgba(124,131,255,.15) 0%,transparent 70%);transform:translate(-50%,-50%);mix-blend-mode:multiply;transition:opacity .3s}
+[data-theme="dark"] #cursor-glow{background:radial-gradient(circle,rgba(124,131,255,.12) 0%,transparent 70%);mix-blend-mode:screen}
+
+.reveal{opacity:0;transform:translateY(40px);transition:opacity .8s var(--ease),transform .8s var(--ease)}
+.reveal.visible{opacity:1;transform:translateY(0)}
+@keyframes float{0%,100%{transform:translateY(0)}50%{transform:translateY(-12px)}}
+.float{animation:float 6s ease-in-out infinite}
+@keyframes pulse-ring{0%{transform:scale(1);opacity:.6}50%{transform:scale(1.06);opacity:.3}100%{transform:scale(1);opacity:.6}}
+@keyframes shimmer{0%{background-position:-200% center}100%{background-position:200% center}}
+
+.section-label{font-family:'Manrope',sans-serif;font-size:.7rem;font-weight:600;text-transform:uppercase;letter-spacing:.18em;background:linear-gradient(135deg,var(--accent-1),var(--accent-2));-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;margin-bottom:12px;display:inline-block}
+.gradient-text{background:linear-gradient(135deg,var(--accent-1),var(--accent-2));-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
+
+.btn-primary{display:inline-flex;align-items:center;gap:8px;padding:14px 32px;background:linear-gradient(135deg,var(--accent-1),var(--accent-2));color:#fff;font-family:'Outfit',sans-serif;font-weight:600;font-size:.9rem;border-radius:var(--pill-radius);border:none;cursor:pointer;box-shadow:4px 4px 14px var(--dark-shadow),-4px -4px 14px var(--light-shadow);transition:transform .25s var(--ease),box-shadow .25s var(--ease);letter-spacing:-0.01em}
+.btn-primary:hover{transform:scale(1.02)}
+.btn-primary:active{transform:scale(.97);box-shadow:inset 3px 3px 8px rgba(0,0,0,.2),inset -3px -3px 8px rgba(255,255,255,.1)}
+.btn-ghost{display:inline-flex;align-items:center;gap:8px;padding:12px 28px;background:transparent;color:var(--text-primary);font-family:'Outfit',sans-serif;font-weight:500;font-size:.9rem;border-radius:var(--pill-radius);border:none;cursor:pointer;box-shadow:4px 4px 10px var(--dark-shadow),-4px -4px 10px var(--light-shadow);transition:transform .25s var(--ease),box-shadow .25s var(--ease),color .25s var(--ease)}
+.btn-ghost:hover{color:var(--accent-1)}
+.btn-ghost:active{transform:scale(.97);box-shadow:inset 3px 3px 8px var(--dark-shadow),inset -3px -3px 8px var(--light-shadow)}
+
+.card{background:var(--bg);border-radius:var(--card-radius);padding:32px;box-shadow:8px 8px 18px var(--dark-shadow),-8px -8px 18px var(--light-shadow);transition:box-shadow .35s var(--ease),transform .35s var(--ease)}
+.card:hover{box-shadow:5px 5px 12px var(--dark-shadow),-5px -5px 12px var(--light-shadow);transform:translateY(3px)}
+
+.pill{display:inline-flex;align-items:center;gap:5px;padding:6px 16px;font-size:.75rem;font-weight:500;border-radius:var(--pill-radius);box-shadow:3px 3px 8px var(--dark-shadow),-3px -3px 8px var(--light-shadow);transition:box-shadow .25s var(--ease),transform .25s var(--ease);white-space:nowrap}
+.pill:hover{box-shadow:inset 3px 3px 6px var(--dark-shadow),inset -3px -3px 6px var(--light-shadow);transform:scale(.97)}
+
+.hero{min-height:100vh;display:flex;align-items:center;justify-content:center;padding:120px 40px var(--section-pad);position:relative}
+.hero-layout{display:flex;align-items:center;gap:64px;max-width:1100px;width:100%}
+.hero-content{flex:1;min-width:0}
+.hero-greeting{font-size:.8rem;font-weight:600;text-transform:uppercase;letter-spacing:.18em;margin-bottom:16px}
+.hero-name{font-size:clamp(2.2rem,5vw,3.8rem);font-weight:700;letter-spacing:-0.03em;margin-bottom:8px}
+.hero-title{font-size:clamp(1.05rem,2.2vw,1.4rem);font-weight:500;color:var(--text-secondary);margin-bottom:24px}
+.hero-objective{font-size:.95rem;color:var(--text-secondary);max-width:520px;margin-bottom:36px;line-height:1.8}
+.hero-buttons{display:flex;gap:16px;flex-wrap:wrap}
+.hero-chips{display:flex;gap:12px;flex-wrap:wrap;margin-top:36px}
+.hero-chip{padding:8px 20px;font-size:.78rem;font-weight:500;border-radius:var(--pill-radius);box-shadow:4px 4px 10px var(--dark-shadow),-4px -4px 10px var(--light-shadow);display:flex;align-items:center;gap:6px;color:var(--text-secondary)}
+.hero-chip iconify-icon{font-size:1rem;color:var(--accent-1)}
+.hero-image-area{flex-shrink:0;position:relative;display:flex;align-items:center;justify-content:center}
+.hero-image-outer{position:relative;width:340px;height:340px;border-radius:50%;display:flex;align-items:center;justify-content:center;background:var(--bg);box-shadow:12px 12px 28px var(--dark-shadow),-12px -12px 28px var(--light-shadow)}
+.hero-image-ring{position:absolute;inset:-6px;border-radius:50%;background:linear-gradient(135deg,var(--accent-1),var(--accent-2),var(--accent-1));background-size:200% 200%;animation:shimmer 4s linear infinite;opacity:.7;z-index:0}
+.hero-image-glow{position:absolute;inset:-30px;border-radius:50%;background:radial-gradient(circle,rgba(124,131,255,.12) 0%,transparent 70%);animation:pulse-ring 4s ease-in-out infinite;z-index:-1}
+.hero-image-inner{position:relative;z-index:1;width:310px;height:310px;border-radius:50%;overflow:hidden;background:var(--bg);box-shadow:inset 4px 4px 12px var(--dark-shadow),inset -4px -4px 12px var(--light-shadow)}
+.hero-image-inner img{width:100%;height:100%;object-fit:cover;display:block;transition:transform .6s var(--ease)}
+.hero-image-outer:hover .hero-image-inner img{transform:scale(1.05)}
+.hero-badge{position:absolute;padding:10px 18px;border-radius:var(--pill-radius);background:var(--bg);box-shadow:6px 6px 14px var(--dark-shadow),-6px -6px 14px var(--light-shadow);font-size:.72rem;font-weight:600;display:flex;align-items:center;gap:6px;z-index:2;white-space:nowrap}
+.hero-badge iconify-icon{font-size:1rem}
+.hero-badge.badge-1{top:20px;right:-30px;animation:float 6s ease-in-out infinite}
+.hero-badge.badge-2{bottom:30px;left:-40px;animation:float 6s ease-in-out infinite 1.5s}
+.hero-badge.badge-3{bottom:80px;right:-20px;animation:float 6s ease-in-out infinite 3s}
+
+.section{padding:var(--section-pad) 40px;max-width:1100px;margin:0 auto}
+.section-title{font-size:clamp(1.8rem,3.5vw,2.6rem);font-weight:700;letter-spacing:-0.03em;margin-bottom:48px}
+
+.about-grid{display:grid;grid-template-columns:1fr 1fr;gap:40px;align-items:start}
+.about-card{padding:36px}
+.about-stat{text-align:center;padding:28px}
+.about-stat .stat-number{font-family:'Outfit',sans-serif;font-size:2.2rem;font-weight:700;letter-spacing:-0.03em}
+.about-stat .stat-label{font-size:.78rem;color:var(--text-secondary);margin-top:4px}
+.stats-row{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:32px}
+
+.edu-timeline{position:relative;padding-left:32px}
+.edu-timeline::before{content:'';position:absolute;left:8px;top:12px;bottom:12px;width:2px;background:linear-gradient(180deg,var(--accent-1),var(--accent-2));border-radius:2px}
+.edu-item{position:relative;margin-bottom:28px}
+.edu-item::before{content:'';position:absolute;left:-28px;top:8px;width:12px;height:12px;border-radius:50%;background:linear-gradient(135deg,var(--accent-1),var(--accent-2));box-shadow:0 0 0 4px var(--bg)}
+.edu-card{padding:28px}
+.edu-degree{font-family:'Outfit',sans-serif;font-size:1.1rem;font-weight:600;margin-bottom:4px}
+.edu-school{color:var(--text-secondary);font-size:.88rem;margin-bottom:6px}
+.edu-meta{display:flex;gap:16px;flex-wrap:wrap;font-size:.78rem;color:var(--text-secondary)}
+.edu-meta span{display:flex;align-items:center;gap:4px}
+.edu-gpa{display:inline-flex;align-items:center;gap:4px;padding:3px 12px;font-size:.75rem;font-weight:600;border-radius:var(--pill-radius);background:linear-gradient(135deg,var(--accent-1),var(--accent-2));color:#fff;margin-top:8px}
+
+.exp-card{padding:32px;margin-bottom:24px}
+.exp-header{display:flex;justify-content:space-between;align-items:flex-start;flex-wrap:wrap;gap:12px;margin-bottom:16px}
+.exp-role{font-family:'Outfit',sans-serif;font-size:1.15rem;font-weight:600}
+.exp-company{color:var(--accent-1);font-weight:500;font-size:.9rem}
+.exp-date{font-size:.78rem;color:var(--text-secondary);display:flex;align-items:center;gap:4px;white-space:nowrap}
+.exp-list{list-style:none;padding:0}
+.exp-list li{position:relative;padding-left:20px;font-size:.88rem;color:var(--text-secondary);margin-bottom:8px;line-height:1.6}
+.exp-list li::before{content:'';position:absolute;left:0;top:9px;width:6px;height:6px;border-radius:50%;background:linear-gradient(135deg,var(--accent-1),var(--accent-2))}
+
+.research-card{padding:32px;margin-bottom:24px}
+.research-title{font-family:'Outfit',sans-serif;font-size:1.05rem;font-weight:600;margin-bottom:4px}
+.research-lab{color:var(--accent-1);font-size:.85rem;font-weight:500;margin-bottom:12px}
+.research-date{font-size:.78rem;color:var(--text-secondary);margin-bottom:16px;display:flex;align-items:center;gap:4px}
+
+.pub-card{padding:24px 28px;margin-bottom:16px;display:flex;gap:16px;align-items:flex-start}
+.pub-badge{flex-shrink:0;width:40px;height:40px;border-radius:var(--small-radius);display:flex;align-items:center;justify-content:center;font-family:'Outfit',sans-serif;font-weight:700;font-size:.7rem;background:linear-gradient(135deg,var(--accent-1),var(--accent-2));color:#fff}
+.pub-title{font-family:'Outfit',sans-serif;font-size:.92rem;font-weight:600;margin-bottom:4px;line-height:1.4}
+.pub-venue{font-size:.78rem;color:var(--text-secondary)}
+.pub-link{font-size:.75rem;color:var(--accent-1);display:inline-flex;align-items:center;gap:3px;margin-top:4px;transition:opacity .2s}
+.pub-link:hover{opacity:.7}
+
+.skills-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(280px,1fr));gap:24px}
+.skill-category{padding:28px}
+.skill-cat-title{font-family:'Outfit',sans-serif;font-size:.92rem;font-weight:600;margin-bottom:14px;display:flex;align-items:center;gap:8px}
+.skill-cat-title iconify-icon{font-size:1.1rem;color:var(--accent-1)}
+.skill-tags{display:flex;flex-wrap:wrap;gap:8px}
+
+.projects-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(320px,1fr));gap:24px}
+.project-card{padding:32px;display:flex;flex-direction:column}
+.project-card .project-tools{display:flex;flex-wrap:wrap;gap:6px;margin-bottom:16px}
+.project-card .tool-tag{font-size:.65rem;font-weight:500;padding:3px 10px;border-radius:var(--pill-radius);color:var(--accent-1);box-shadow:2px 2px 6px var(--dark-shadow),-2px -2px 6px var(--light-shadow)}
+.project-name{font-family:'Outfit',sans-serif;font-size:1.1rem;font-weight:600;margin-bottom:12px}
+.project-desc{font-size:.85rem;color:var(--text-secondary);line-height:1.7;flex:1}
+.project-date{font-size:.75rem;color:var(--text-secondary);margin-top:16px;display:flex;align-items:center;gap:4px}
+
+.sub-section-header{display:flex;align-items:center;gap:12px;margin-bottom:24px}
+.sub-section-icon{font-size:1.3rem;color:var(--accent-1);display:flex;align-items:center;justify-content:center;width:42px;height:42px;border-radius:var(--small-radius);box-shadow:4px 4px 10px var(--dark-shadow),-4px -4px 10px var(--light-shadow);flex-shrink:0}
+.sub-section-title{font-family:'Outfit',sans-serif;font-size:1.15rem;font-weight:600;letter-spacing:-0.02em}
+.recognition-timeline{position:relative;padding-left:36px}
+.recognition-timeline::before{content:'';position:absolute;left:10px;top:16px;bottom:16px;width:2px;background:linear-gradient(180deg,var(--accent-1),var(--accent-2));border-radius:2px}
+.recognition-item{position:relative;margin-bottom:20px}
+.recognition-item:last-child{margin-bottom:0}
+.recognition-dot{position:absolute;left:-30px;top:24px;width:14px;height:14px;border-radius:50%;background:linear-gradient(135deg,var(--accent-1),var(--accent-2));box-shadow:0 0 0 4px var(--bg);z-index:1}
+.recognition-item:last-child .recognition-dot{box-shadow:0 0 0 4px var(--bg),0 0 12px color-mix(in srgb,var(--accent-1) 40%,transparent)}
+.recognition-card{padding:24px 28px !important}
+.recognition-card-top{display:flex;align-items:flex-start;justify-content:space-between;gap:12px;flex-wrap:wrap;margin-bottom:6px}
+.recognition-role{font-family:'Outfit',sans-serif;font-size:1.05rem;font-weight:600;letter-spacing:-0.01em}
+.recognition-date-pill{display:inline-flex;align-items:center;gap:4px;padding:4px 14px;font-size:.7rem;font-weight:600;border-radius:var(--pill-radius);background:linear-gradient(135deg,var(--accent-1),var(--accent-2));color:#fff;white-space:nowrap;box-shadow:2px 2px 6px color-mix(in srgb,var(--accent-1) 25%,transparent)}
+.recognition-org{display:flex;align-items:center;gap:6px;font-size:.82rem;color:var(--accent-1);font-weight:500;margin-bottom:14px}
+.recognition-desc{font-size:.84rem;color:var(--text-secondary);line-height:1.6;padding:10px 14px;border-radius:10px;background:color-mix(in srgb,var(--dark-shadow) 12%,transparent);display:flex;align-items:flex-start;gap:8px}
+.recognition-desc iconify-icon{flex-shrink:0;margin-top:2px;color:var(--accent-2);font-size:.85rem}
+.recognition-list{list-style:none;padding:0}
+.recognition-list li{position:relative;padding-left:18px;font-size:.84rem;color:var(--text-secondary);margin-bottom:6px;line-height:1.6}
+.recognition-list li::before{content:'';position:absolute;left:0;top:9px;width:6px;height:6px;border-radius:50%;background:linear-gradient(135deg,var(--accent-1),var(--accent-2))}
+.recognition-list li:last-child{margin-bottom:0}
+
+.cert-issuer-row{display:grid;grid-template-columns:1fr 1fr 1fr;gap:24px;margin-bottom:24px}
+.cert-issuer-card{padding:0 !important;overflow:hidden}
+.cert-issuer-banner{padding:20px 24px;display:flex;align-items:center;gap:14px;position:relative;overflow:hidden}
+.cert-issuer-banner::after{content:'';position:absolute;inset:0;opacity:.07;background:linear-gradient(135deg,var(--accent-1),var(--accent-2));pointer-events:none}
+.cert-issuer-logo{width:44px;height:44px;border-radius:12px;display:flex;align-items:center;justify-content:center;font-size:1.3rem;color:#fff;flex-shrink:0;position:relative;z-index:1}
+.cert-issuer-logo.aws{background:linear-gradient(135deg,#FF9900,#FFB84D)}
+.cert-issuer-logo.cisco{background:linear-gradient(135deg,#049FD9,#6CC04A)}
+.cert-issuer-logo.hackerrank{background:linear-gradient(135deg,#00EA64,#00B4AB)}
+.cert-issuer-text{position:relative;z-index:1}
+.cert-issuer-name{font-family:'Outfit',sans-serif;font-size:1rem;font-weight:700;letter-spacing:-0.02em}
+.cert-issuer-count{font-size:.7rem;color:var(--text-secondary);margin-top:1px}
+.cert-issuer-body{padding:20px 24px 24px}
+.cert-row{display:flex;align-items:center;justify-content:space-between;gap:10px;padding:9px 0;border-bottom:1px solid color-mix(in srgb,var(--dark-shadow) 18%,transparent)}
+.cert-row:last-child{border-bottom:none;padding-bottom:0}
+.cert-row:first-child{padding-top:0}
+.cert-row-name{font-size:.8rem;font-weight:500;color:var(--text-primary);line-height:1.35;display:flex;align-items:center;gap:8px}
+.cert-row-name iconify-icon{font-size:.7rem;color:var(--accent-1);flex-shrink:0}
+.cert-row-date{font-size:.65rem;color:var(--text-secondary);white-space:nowrap;flex-shrink:0;padding:2px 10px;border-radius:var(--pill-radius);background:color-mix(in srgb,var(--dark-shadow) 15%,transparent)}
+.cert-hackerrank-card{padding:0 !important;overflow:hidden}
+.cert-hr-banner{padding:20px 28px;display:flex;align-items:center;justify-content:space-between;gap:16px;flex-wrap:wrap;position:relative;overflow:hidden}
+.cert-hr-banner::after{content:'';position:absolute;inset:0;opacity:.07;background:linear-gradient(135deg,#00EA64,#00B4AB);pointer-events:none}
+.cert-hr-banner-left{display:flex;align-items:center;gap:14px;position:relative;z-index:1}
+.cert-hr-body{padding:0 28px 28px}
+.cert-featured{display:flex;align-items:center;gap:14px;padding:16px 20px;border-radius:var(--small-radius);margin-bottom:24px;box-shadow:inset 4px 4px 10px var(--dark-shadow),inset -4px -4px 10px var(--light-shadow)}
+.cert-featured-icon{width:42px;height:42px;border-radius:12px;display:flex;align-items:center;justify-content:center;background:linear-gradient(135deg,var(--accent-1),var(--accent-2));color:#fff;font-size:1.1rem;flex-shrink:0}
+.cert-featured-info{flex:1}
+.cert-featured-title{font-family:'Outfit',sans-serif;font-size:.92rem;font-weight:700}
+.cert-featured-sub{font-size:.7rem;color:var(--text-secondary)}
+.cert-featured-badge{padding:4px 14px;font-size:.65rem;font-weight:700;border-radius:var(--pill-radius);background:linear-gradient(135deg,var(--accent-1),var(--accent-2));color:#fff;white-space:nowrap}
+.cert-skill-groups{display:flex;flex-direction:column;gap:20px}
+.cert-skill-group-label{font-size:.65rem;font-weight:700;text-transform:uppercase;letter-spacing:.14em;color:var(--text-secondary);padding-bottom:8px;border-bottom:1px solid color-mix(in srgb,var(--dark-shadow) 20%,transparent);margin-bottom:2px}
+.cert-skill-badges{display:flex;flex-wrap:wrap;gap:8px}
+.cert-skill-badge{display:inline-flex;align-items:center;gap:6px;padding:7px 14px;font-size:.72rem;font-weight:600;border-radius:var(--pill-radius);box-shadow:3px 3px 8px var(--dark-shadow),-3px -3px 8px var(--light-shadow);transition:box-shadow .25s var(--ease),transform .25s var(--ease);white-space:nowrap;color:var(--text-primary)}
+.cert-skill-badge:hover{box-shadow:inset 3px 3px 6px var(--dark-shadow),inset -3px -3px 6px var(--light-shadow);transform:scale(.97)}
+.cert-level{font-size:.58rem;font-weight:700;padding:2px 8px;border-radius:10px;color:#fff;letter-spacing:.02em}
+.cert-level.basic{background:#6b7488}
+.cert-level.intermediate{background:var(--accent-1)}
+.cert-level.advanced{background:linear-gradient(135deg,var(--accent-1),var(--accent-2))}
+
+/* ═══════════════════════════════════════════
+   CONTACT — COMPACT LAYOUT
+   ═══════════════════════════════════════════ */
+.contact-grid{
+  display:grid;
+  grid-template-columns:2fr 3fr;
+  gap:32px;
+}
+
+.contact-info-card{
+  padding:28px !important;
+  display:flex;flex-direction:column;
+}
+
+.contact-intro{
+  font-size:.82rem;color:var(--text-secondary);
+  margin-bottom:20px;line-height:1.7;
+}
+
+.contact-links{display:flex;flex-direction:column;gap:2px}
+
+.contact-link{
+  display:flex;align-items:center;gap:10px;
+  padding:8px 12px;
+  border-radius:10px;
+  color:var(--text-secondary);font-size:.8rem;
+  transition:color .25s var(--ease),box-shadow .25s var(--ease);
+}
+.contact-link:hover{
+  color:var(--text-primary);
+  box-shadow:3px 3px 8px var(--dark-shadow),-3px -3px 8px var(--light-shadow);
+}
+.contact-link:active{
+  box-shadow:inset 2px 2px 5px var(--dark-shadow),inset -2px -2px 5px var(--light-shadow);
+}
+.contact-link iconify-icon{
+  font-size:.95rem;color:var(--accent-1);flex-shrink:0;width:20px;text-align:center;
+}
+.contact-link-text{
+  overflow:hidden;text-overflow:ellipsis;white-space:nowrap;
+}
+
+.contact-divider{
+  height:1px;margin:14px 0;
+  background:color-mix(in srgb,var(--dark-shadow) 25%,transparent);
+}
+
+.contact-langs{
+  display:flex;gap:6px;flex-wrap:wrap;margin-top:auto;padding-top:14px;
+}
+.contact-lang{
+  font-size:.62rem;font-weight:600;
+  padding:3px 10px;border-radius:var(--pill-radius);
+  box-shadow:2px 2px 6px var(--dark-shadow),-2px -2px 6px var(--light-shadow);
+  color:var(--text-secondary);
+  display:flex;align-items:center;gap:4px;
+}
+.contact-lang iconify-icon{font-size:.75rem;color:var(--accent-1)}
+
+.contact-form{padding:28px}
+.form-group{margin-bottom:16px}
+.form-group label{display:block;font-size:.68rem;font-weight:600;text-transform:uppercase;letter-spacing:.1em;color:var(--text-secondary);margin-bottom:6px}
+.form-input{width:100%;padding:12px 16px;font-family:'Manrope',sans-serif;font-size:.85rem;color:var(--text-primary);background:var(--bg);border:2px solid transparent;border-radius:var(--small-radius);box-shadow:inset 3px 3px 8px var(--dark-shadow),inset -3px -3px 8px var(--light-shadow);transition:border-color .25s var(--ease),box-shadow .25s var(--ease);outline:none}
+.form-input:focus{border-color:rgba(124,131,255,.3)}
+.form-input::placeholder{color:var(--text-secondary);opacity:.6}
+textarea.form-input{resize:vertical;min-height:100px}
+
+footer{text-align:center;padding:48px 40px;font-size:.78rem;color:var(--text-secondary)}
+footer .footer-links{display:flex;justify-content:center;gap:24px;margin-bottom:16px}
+footer .footer-links a{display:flex;align-items:center;gap:5px;transition:color .25s var(--ease)}
+footer .footer-links a:hover{color:var(--accent-1)}
+
+.back-to-top{position:fixed;bottom:32px;right:32px;z-index:90;width:48px;height:48px;border-radius:50%;border:none;cursor:pointer;background:linear-gradient(135deg,var(--accent-1),var(--accent-2));color:#fff;font-size:1.2rem;display:flex;align-items:center;justify-content:center;box-shadow:4px 4px 12px var(--dark-shadow),-4px -4px 12px var(--light-shadow);opacity:0;pointer-events:none;transform:translateY(20px);transition:opacity .35s var(--ease),transform .35s var(--ease)}
+.back-to-top.show{opacity:1;pointer-events:auto;transform:translateY(0)}
+.back-to-top:active{transform:scale(.9)}
+
+@media(max-width:1100px){.hero-image-outer{width:280px;height:280px}.hero-image-inner{width:250px;height:250px}.hero-badge{font-size:.65rem;padding:7px 14px}.hero-badge.badge-1{right:-10px}.hero-badge.badge-2{left:-10px}.hero-badge.badge-3{right:0}}
+@media(max-width:900px){.about-grid,.contact-grid{grid-template-columns:1fr}.hero-layout{flex-direction:column-reverse;text-align:center;gap:40px}.hero-content{display:flex;flex-direction:column;align-items:center}.hero-objective{max-width:100%}.hero-buttons{justify-content:center}.hero-chips{justify-content:center}.hero-image-outer{width:240px;height:240px}.hero-image-inner{width:214px;height:214px}.hero-badge.badge-1{right:10px;top:10px}.hero-badge.badge-2{left:10px;bottom:20px}.hero-badge.badge-3{right:20px;bottom:60px}.cert-issuer-row{grid-template-columns:1fr}}
+@media(max-width:768px){nav{padding:12px 16px}.nav-links{display:none!important}.nav-cta{display:none!important}.nav-avatar{width:32px;height:32px}.mobile-menu-btn{display:flex}.section{padding:60px 20px}.hero{padding:100px 20px 60px}.projects-grid,.skills-grid{grid-template-columns:1fr}#cursor-glow{display:none}.hero-image-outer{width:200px;height:200px}.hero-image-inner{width:178px;height:178px}.hero-badge{padding:6px 12px;font-size:.6rem}.hero-badge iconify-icon{font-size:.8rem}.hero-badge.badge-3{display:none}.cert-hr-banner{flex-direction:column;align-items:flex-start}}
+</style>
+</head>
+<body>
+<div id="cursor-glow"></div>
+<!-- NAVBAR -->
+<nav id="mainNav">
+  <div class="nav-bar">
+    <a href="#hero" class="nav-logo-area"><img src="img_red.png" alt="Shakil" class="nav-avatar"><span class="nav-logo">Shakil<span class="logo-dot"></span></span></a>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="#about" class="active">About</a></li>
+      <li><a href="#education">Education</a></li>
+      <li><a href="#experience">Experience</a></li>
+      <li><a href="#research">Research</a></li>
+      <li><a href="#skills">Skills</a></li>
+      <li><a href="#projects">Projects</a></li>
+      <li><a href="#certs">Certifications</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+    <div class="nav-right">
+      <button class="theme-toggle" id="themeToggle" aria-label="Toggle theme"><iconify-icon icon="lucide:sun" id="themeIcon"></iconify-icon></button>
+      <button class="mobile-menu-btn" id="mobileMenuBtn" aria-label="Menu"><iconify-icon icon="lucide:menu"></iconify-icon></button>
+    </div>
+  </div>
+</nav>
+<div class="nav-mobile-overlay" id="mobileOverlay">
+  <button class="nav-close" id="mobileClose" aria-label="Close menu"><iconify-icon icon="lucide:x"></iconify-icon></button>
+  <img src="img_red.png" alt="Shakil" class="mobile-avatar"><div class="mobile-name">MD. Shakil Ahmed</div>
+  <a href="#about" onclick="closeNav()">About</a>
+  <a href="#education" onclick="closeNav()">Education</a>
+  <a href="#experience" onclick="closeNav()">Experience</a>
+  <a href="#research" onclick="closeNav()">Research</a>
+  <a href="#skills" onclick="closeNav()">Skills</a>
+  <a href="#projects" onclick="closeNav()">Projects</a>
+  <a href="#certs" onclick="closeNav()">Certifications</a>
+  <a href="#contact" onclick="closeNav()">Contact</a>
+  
+</div>
+
+<!-- HERO -->
+<section class="hero" id="hero">
+  <div class="hero-layout">
+    <div class="hero-content">
+      <div class="hero-greeting section-label reveal">Hello, I'm</div>
+      <h1 class="hero-name reveal">MD. Shakil <span class="gradient-text">Ahmed</span></h1>
+      <p class="hero-title reveal">IoT & Robotics Engineer · Researcher · Full-Stack Developer</p>
+      <p class="hero-objective reveal">Socially conscious IoT & Robotics Engineering graduate with strong programming skills in C, C++, Python, and JavaScript, combined with experience in content development and storytelling — leveraging technology for positive social impact.</p>
+
+<div class="hero-buttons reveal">
+    <a href="#projects" class="btn-primary">
+        View Projects
+        <iconify-icon icon="lucide:arrow-down-right"></iconify-icon>
+    </a>
+
+    <a href="Shakil_Ahmed_Resume.pdf"
+       target="_blank"
+       class="btn-ghost">
+        Download Resume
+        <iconify-icon icon="lucide:download"></iconify-icon>
+    </a>
+</div>
+
+      <div class="hero-chips reveal"><div class="hero-chip float" style="animation-delay:0s"><iconify-icon icon="lucide:cpu"></iconify-icon> IoT & Robotics</div><div class="hero-chip float" style="animation-delay:1s"><iconify-icon icon="lucide:brain-circuit"></iconify-icon> Machine Learning</div><div class="hero-chip float" style="animation-delay:2s"><iconify-icon icon="lucide:shield-check"></iconify-icon> Cyber Security</div></div>
+    </div>
+
+
+    <div class="hero-image-area reveal"><div class="hero-image-outer"><div class="hero-image-glow"></div><div class="hero-image-ring"></div><div class="hero-image-inner"><img src="img_red.png" alt="MD. Shakil Ahmed"></div><div class="hero-badge badge-1"><iconify-icon icon="lucide:file-text" style="color:var(--accent-1)"></iconify-icon> 3 Publications</div><div class="hero-badge badge-2"><iconify-icon icon="lucide:award" style="color:var(--accent-2)"></iconify-icon> 9+ Projects</div><div class="hero-badge badge-3"><iconify-icon icon="lucide:trophy" style="color:#f5a623"></iconify-icon> 23 Certifications</div></div></div>
+  </div>
+</section>
+
+<!-- ABOUT -->
+<section class="section" id="about">
+  <div class="reveal"><span class="section-label">About Me</span><h2 class="section-title">Bridging <span class="gradient-text">Technology</span> & Social Impact</h2></div>
+  <div class="about-grid">
+    <div class="card about-card reveal"><p style="font-size:.92rem;color:var(--text-secondary);line-height:1.9;margin-bottom:16px">I am an IoT & Robotics Engineering graduate from the University of Frontier Technology, Bangladesh, with a passion for building intelligent systems that solve real-world problems. From UAV-based dengue detection to NLP-driven vulnerability prediction, my research sits at the intersection of hardware and AI.</p><p style="font-size:.92rem;color:var(--text-secondary);line-height:1.9">With published work in ACM and IJACSA, hands-on experience in full-stack development, and a commitment to amplifying marginalized voices through technology, I aim to create solutions that are not just innovative — but meaningful.</p></div>
+    <div class="reveal"><div class="stats-row"><div class="card about-stat"><div class="stat-number gradient-text">3</div><div class="stat-label">Publications</div></div><div class="card about-stat"><div class="stat-number gradient-text">9+</div><div class="stat-label">Projects</div></div><div class="card about-stat"><div class="stat-number gradient-text">23</div><div class="stat-label">Certifications</div></div></div><div class="stats-row" style="margin-top:16px"><div class="card about-stat"><div class="stat-number gradient-text">2</div><div class="stat-label">Research Roles</div></div><div class="card about-stat"><div class="stat-number gradient-text">3</div><div class="stat-label">Honors</div></div><div class="card about-stat"><div class="stat-number gradient-text">3</div><div class="stat-label">Leadership</div></div></div></div>
+  </div>
+</section>
+
+<!-- EDUCATION -->
+<section class="section" id="education">
+  <div class="reveal"><span class="section-label">Education</span><h2 class="section-title">Academic <span class="gradient-text">Journey</span></h2></div>
+  <div class="edu-timeline">
+    <div class="edu-item reveal"><div class="card edu-card"><div class="edu-degree">B.Sc Engg. in Internet of Things and Robotics Engineering</div><div class="edu-school">University of Frontier Technology, Bangladesh (UFTB)</div><div class="edu-meta"><span><iconify-icon icon="lucide:calendar" style="font-size:.85rem"></iconify-icon> Jan 2020 – Jan 2025</span><span><iconify-icon icon="lucide:map-pin" style="font-size:.85rem"></iconify-icon> Gazipur, Bangladesh</span></div><div class="edu-gpa"><iconify-icon icon="lucide:award" style="font-size:.75rem"></iconify-icon> CGPA: 3.37 / 4.00</div></div></div>
+    <div class="edu-item reveal"><div class="card edu-card"><div class="edu-degree">Higher Secondary Certificate (HSC)</div><div class="edu-school">Police Lines School and College, Rangpur</div><div class="edu-meta"><span><iconify-icon icon="lucide:calendar" style="font-size:.85rem"></iconify-icon> Jul 2017 – May 2019</span><span><iconify-icon icon="lucide:map-pin" style="font-size:.85rem"></iconify-icon> Rangpur, Bangladesh</span></div><div class="edu-gpa"><iconify-icon icon="lucide:award" style="font-size:.75rem"></iconify-icon> Grade: 5.00 / 5.00</div></div></div>
+    <div class="edu-item reveal"><div class="card edu-card"><div class="edu-degree">Secondary School Certificate (SSC)</div><div class="edu-school">Police Lines School and College, Rangpur</div><div class="edu-meta"><span><iconify-icon icon="lucide:calendar" style="font-size:.85rem"></iconify-icon> Jan 2015 – Apr 2017</span><span><iconify-icon icon="lucide:map-pin" style="font-size:.85rem"></iconify-icon> Rangpur, Bangladesh</span></div><div class="edu-gpa"><iconify-icon icon="lucide:award" style="font-size:.75rem"></iconify-icon> GPA: 5.00 / 5.00</div></div></div>
+  </div>
+</section>
+
+<!-- EXPERIENCE -->
+<section class="section" id="experience">
+  <div class="reveal"><span class="section-label">Experience</span><h2 class="section-title">Professional <span class="gradient-text">Journey</span></h2></div>
+  <div class="card exp-card reveal"><div class="exp-header"><div><div class="exp-role">Advanced Python & Django Instructor</div><div class="exp-company">PeopleNTech Limited</div></div><div class="exp-date"><iconify-icon icon="lucide:calendar"></iconify-icon> Jul 2025 – Dec 2025</div></div><ul class="exp-list"><li>Trained students in Advanced Python, Django, and real-world web app development</li><li>Designed hands-on projects including REST APIs, authentication systems, and database-driven applications</li><li>Mentored students on debugging, optimization, and best coding practices</li><li>Developed structured course materials and coding exercises tailored to industry standards</li></ul></div>
+  <div class="card exp-card reveal"><div class="exp-header"><div><div class="exp-role">Software Engineer Intern</div><div class="exp-company">HackerRank Verified Certification</div></div><div class="exp-date"><iconify-icon icon="lucide:calendar"></iconify-icon> Jun 2025</div></div><ul class="exp-list"><li>Successfully verified by HackerRank, demonstrating skills in algorithms, problem solving, and backend technologies</li><li>Covered data structures, REST APIs, SQL, debugging, and object-oriented programming</li></ul></div>
+</section>
+
+<!-- RESEARCH -->
+<section class="section" id="research">
+  <div class="reveal"><span class="section-label">Research</span><h2 class="section-title">Research <span class="gradient-text">Experience</span></h2></div>
+  <div class="card research-card reveal"><div class="exp-header"><div><div class="research-title">UAV-Based Dengue Breeding Site Detection System</div><div class="research-lab">UFTB Robotics Lab · UGC-Funded</div></div><div class="research-date"><iconify-icon icon="lucide:calendar"></iconify-icon> Jan 2024 – Dec 2024</div></div><ul class="exp-list"><li>Developed an innovative UAV-based system for detecting dengue breeding sites</li><li>Contributed to publication: "Smart System for Real-Time Monitoring and Diagnosis of Dengue Surfaces in Bangladesh"</li><li>Designed algorithms for real-time data collection and analysis using UAVs</li><li>Conducted extensive field tests to validate system accuracy</li></ul></div>
+  <div class="card research-card reveal"><div class="exp-header"><div><div class="research-title">NOIRBETTIK: Bangla Language MCQ Answering Dataset</div><div class="research-lab">Software Intelligence Lab · UGC-Funded</div></div><div class="research-date"><iconify-icon icon="lucide:calendar"></iconify-icon> Jan 2023 – Dec 2023</div></div><ul class="exp-list"><li>Conducted research on Bangla reading comprehension QA dataset</li><li>Fine-tuned LLMs including BERT, ALBERT for Bangla comprehension tasks</li><li>Improved dataset quality and model accuracy for Bangla MCQ systems</li><li>Validated model performance through extensive experiments</li></ul></div>
+  <div class="reveal" style="margin-top:56px"><span class="section-label">Publications</span><h3 style="font-family:'Outfit',sans-serif;font-size:1.4rem;font-weight:600;margin-bottom:24px">Selected <span class="gradient-text">Works</span></h3></div>
+  <div class="card pub-card reveal"><div class="pub-badge">J.2</div><div><div class="pub-title">A Novel Vulnerability Exploit Prediction System using Relational Vulnerability-Vendor Network</div><div class="pub-venue">Digital Threats: Research and Practice (DTRAP), ACM, 2024</div><a href="https://dl.acm.org/doi/10.1145/3724133" target="_blank" class="pub-link">View Paper <iconify-icon icon="lucide:external-link"></iconify-icon></a></div></div>
+  <div class="card pub-card reveal"><div class="pub-badge">J.1</div><div><div class="pub-title">CVSS Prediction with BERT: Leveraging NLP for Security Assessments</div><div class="pub-venue">IJACSA, 2024</div><div class="pub-link" style="opacity:.5">Accepted for Publication</div></div></div>
+  <div class="card pub-card reveal"><div class="pub-badge">C.1</div><div><div class="pub-title">Predictive Defense: Leveraging Vendor-Vulnerability Networks to Forecast Cyber Exploits</div><div class="pub-venue">ITASEC, 2024</div></div></div>
+</section>
+
+<!-- SKILLS -->
+<section class="section" id="skills">
+  <div class="reveal"><span class="section-label">Skills</span><h2 class="section-title">Technical <span class="gradient-text">Arsenal</span></h2></div>
+  <div class="skills-grid">
+    <div class="card skill-category reveal"><div class="skill-cat-title"><iconify-icon icon="lucide:code-2"></iconify-icon> Programming Languages</div><div class="skill-tags"><span class="pill">Python</span><span class="pill">C</span><span class="pill">C++</span><span class="pill">SQL</span><span class="pill">Arduino</span><span class="pill">JavaScript</span></div></div>
+    <div class="card skill-category reveal"><div class="skill-cat-title"><iconify-icon icon="lucide:globe"></iconify-icon> Web Technologies</div><div class="skill-tags"><span class="pill">HTML</span><span class="pill">CSS</span><span class="pill">JavaScript</span><span class="pill">FastAPI</span><span class="pill">Django</span><span class="pill">PHP</span></div></div>
+    <div class="card skill-category reveal"><div class="skill-cat-title"><iconify-icon icon="lucide:database"></iconify-icon> Database Systems</div><div class="skill-tags"><span class="pill">MySQL</span><span class="pill">MongoDB</span></div></div>
+    <div class="card skill-category reveal"><div class="skill-cat-title"><iconify-icon icon="lucide:brain-circuit"></iconify-icon> Data Science & ML</div><div class="skill-tags"><span class="pill">TensorFlow</span><span class="pill">Keras</span><span class="pill">PyTorch</span><span class="pill">Scikit-learn</span><span class="pill">Pandas</span><span class="pill">NumPy</span></div></div>
+    <div class="card skill-category reveal"><div class="skill-cat-title"><iconify-icon icon="lucide:container"></iconify-icon> DevOps & Version Control</div><div class="skill-tags"><span class="pill">Git</span><span class="pill">GitHub</span><span class="pill">Docker</span><span class="pill">Linux</span><span class="pill">XAMPP</span><span class="pill">Apache</span><span class="pill">Postman</span><span class="pill">REST API</span></div></div>
+    <div class="card skill-category reveal"><div class="skill-cat-title"><iconify-icon icon="lucide:bot"></iconify-icon> Robotics</div><div class="skill-tags"><span class="pill">Sensor Integration</span><span class="pill">Pathfinding Algorithms</span></div></div>
+    <div class="card skill-category reveal"><div class="skill-cat-title"><iconify-icon icon="lucide:wrench"></iconify-icon> Tools & Platforms</div><div class="skill-tags"><span class="pill">VS Code</span><span class="pill">Jupyter</span><span class="pill">Moodle</span></div></div>
+    <div class="card skill-category reveal"><div class="skill-cat-title"><iconify-icon icon="lucide:pen-tool"></iconify-icon> Research & Communication</div><div class="skill-tags"><span class="pill">Academic Writing</span><span class="pill">Literature Review</span><span class="pill">Data Analysis</span><span class="pill">Report Preparation</span></div></div>
+    <div class="card skill-category reveal"><div class="skill-cat-title"><iconify-icon icon="lucide:users"></iconify-icon> Project Management</div><div class="skill-tags"><span class="pill">Team Leadership</span><span class="pill">Remote Coordination</span><span class="pill">Documentation</span></div></div>
+  </div>
+</section>
+
+<!-- PROJECTS -->
+<section class="section" id="projects">
+  <div class="reveal"><span class="section-label">Projects</span><h2 class="section-title">Featured <span class="gradient-text">Builds</span></h2></div>
+  <div class="projects-grid">
+    <div class="card project-card reveal"><div class="project-tools"><span class="tool-tag">PHP</span><span class="tool-tag">MySQL</span><span class="tool-tag">PDO</span><span class="tool-tag">Bootstrap</span><span class="tool-tag">JavaScript</span><span class="tool-tag">PHPMailer</span></div><div class="project-name">Exam System (TestPro)</div><ul class="project-desc exp-list"><li>Full-featured exam platform with three-tier role access and automated grading</li><li>Anti-cheat mechanisms, CSV/PDF export, real-time notifications</li></ul><div class="project-date"><iconify-icon icon="lucide:calendar"></iconify-icon> Nov 2025 – Present</div></div>
+    <div class="card project-card reveal"><div class="project-tools"><span class="tool-tag">Django</span><span class="tool-tag">MySQL</span><span class="tool-tag">Celery</span><span class="tool-tag">Redis</span><span class="tool-tag">APScheduler</span></div><div class="project-name">Library Management System</div><ul class="project-desc exp-list"><li>Role-based dashboards with approval-based registration workflow</li><li>Celery & Redis for async notifications, APScheduler for maintenance</li></ul><div class="project-date"><iconify-icon icon="lucide:calendar"></iconify-icon> Sep 2025 – Oct 2025</div></div>
+    <div class="card project-card reveal"><div class="project-tools"><span class="tool-tag">Python</span><span class="tool-tag">OpenStreetMap</span><span class="tool-tag">Leaflet.js</span></div><div class="project-name">Dhaka City Bus Route Finder</div><ul class="project-desc exp-list"><li>Real-time bus route planning with interactive maps</li><li>Bidirectional routes, station normalization, optimized path-finding</li></ul><div class="project-date"><iconify-icon icon="lucide:calendar"></iconify-icon> Jul 2025 – Sep 2025</div></div>
+    <div class="card project-card reveal"><div class="project-tools"><span class="tool-tag">PHP</span><span class="tool-tag">MySQL</span><span class="tool-tag">RBAC</span><span class="tool-tag">Bootstrap</span></div><div class="project-name">EduTrack – Coaching Management</div><ul class="project-desc exp-list"><li>Role-based coaching management with secure authentication</li><li>Dynamic filtering, financial tracking, RBAC database layer</li></ul><div class="project-date"><iconify-icon icon="lucide:calendar"></iconify-icon> Feb 2025 – Jun 2025</div></div>
+    <div class="card project-card reveal"><div class="project-tools"><span class="tool-tag">PHP</span><span class="tool-tag">OpenRouter AI</span><span class="tool-tag">Gemini</span></div><div class="project-name">Smart Lunch Management (SLMS)</div><ul class="project-desc exp-list"><li>Dual-role meal management with AI-powered querying</li><li>Automated ordering, billing, reporting, bulk email</li></ul><div class="project-date"><iconify-icon icon="lucide:calendar"></iconify-icon> Jan 2025</div></div>
+    <div class="card project-card reveal"><div class="project-tools"><span class="tool-tag">RGCN</span><span class="tool-tag">LDA</span><span class="tool-tag">CVE</span><span class="tool-tag">Exploit-DB</span></div><div class="project-name">Vulnerability Exploit Prediction</div><ul class="project-desc exp-list"><li>Relational vulnerability-vendor network using RGCN — 80.62% accuracy</li><li>LDA topic modeling on CVE descriptions for feature representation</li></ul><div class="project-date"><iconify-icon icon="lucide:calendar"></iconify-icon> Jul 2024 – Dec 2024</div></div>
+    <div class="card project-card reveal"><div class="project-tools"><span class="tool-tag">BERT</span><span class="tool-tag">TensorFlow</span><span class="tool-tag">NVD</span></div><div class="project-name">CVSS Prediction with BERT</div><ul class="project-desc exp-list"><li>BERT classifiers to predict CVSS base vector metrics from CVE descriptions</li><li>Gradient-based input saliency for explainability</li></ul><div class="project-date"><iconify-icon icon="lucide:calendar"></iconify-icon> Jan 2024 – Jun 2024</div></div>
+    <div class="card project-card reveal"><div class="project-tools"><span class="tool-tag">ESP32-CAM</span><span class="tool-tag">MobileNet</span><span class="tool-tag">Android</span></div><div class="project-name">Smart Night Patrolling Robot</div><ul class="project-desc exp-list"><li>Autonomous patrolling with real-time human/path detection</li><li>Obstacle avoidance and low-power operation on ESP32-CAM</li></ul><div class="project-date"><iconify-icon icon="lucide:calendar"></iconify-icon> Jun 2023 – Sep 2023</div></div>
+    <div class="card project-card reveal"><div class="project-tools"><span class="tool-tag">PHP</span><span class="tool-tag">MySQL</span><span class="tool-tag">PDO</span><span class="tool-tag">Bootstrap</span><span class="tool-tag">JavaScript</span><span class="tool-tag">PHPMailer</span></div><div class="project-name">Blood Management System</div><ul class="project-desc exp-list"><li>Web-based blood donation platform with three-tier role access (Admin, Donor, Receiver)</li><li>Blood inventory tracking, donor search, email notifications, CSV/PDF export</li></ul><div class="project-date"><iconify-icon icon="lucide:calendar"></iconify-icon> Mar 2023 - Jun 2023</div></div>
+  </div>
+</section>
+
+<!-- HONORS & LEADERSHIP -->
+<section class="section" id="honors">
+  <div class="reveal"><span class="section-label">Recognition</span><h2 class="section-title">Honors & <span class="gradient-text">Leadership</span></h2></div>
+  <div class="reveal" style="margin-bottom:32px"><div class="sub-section-header"><iconify-icon icon="lucide:trophy" class="sub-section-icon"></iconify-icon><h3 class="sub-section-title">Honors & Awards</h3></div></div>
+  <div class="recognition-timeline">
+    <div class="recognition-item reveal"><div class="recognition-dot"></div><div class="card recognition-card"><div class="recognition-card-top"><div class="recognition-role">2nd Place — University Project Competition 2022</div><div class="recognition-date-pill"><iconify-icon icon="lucide:calendar" style="font-size:.7rem"></iconify-icon> Jun 2022</div></div><div class="recognition-org"><iconify-icon icon="lucide:building-2" style="font-size:.85rem"></iconify-icon> UFTB, Bangladesh</div><div class="recognition-desc"><iconify-icon icon="lucide:lightbulb"></iconify-icon> Designed & customized a video conferencing system (WCS) using BigBlueButton, hosted on Azure</div></div></div>
+    <div class="recognition-item reveal"><div class="recognition-dot"></div><div class="card recognition-card"><div class="recognition-card-top"><div class="recognition-role">HSC Board Scholarship</div><div class="recognition-date-pill"><iconify-icon icon="lucide:calendar" style="font-size:.7rem"></iconify-icon> May 2019</div></div><div class="recognition-org"><iconify-icon icon="lucide:building-2" style="font-size:.85rem"></iconify-icon> Board of Intermediate and Secondary Education, Dinajpur</div><div class="recognition-desc"><iconify-icon icon="lucide:lightbulb"></iconify-icon> Merit-based scholarship for academic excellence in HSC examinations</div></div></div>
+    <div class="recognition-item reveal"><div class="recognition-dot"></div><div class="card recognition-card"><div class="recognition-card-top"><div class="recognition-role">SSC Board Scholarship</div><div class="recognition-date-pill"><iconify-icon icon="lucide:calendar" style="font-size:.7rem"></iconify-icon> May 2017</div></div><div class="recognition-org"><iconify-icon icon="lucide:building-2" style="font-size:.85rem"></iconify-icon> Board of Intermediate and Secondary Education, Dinajpur</div><div class="recognition-desc"><iconify-icon icon="lucide:lightbulb"></iconify-icon> Merit-based scholarship for academic excellence in SSC examinations</div></div></div>
+  </div>
+  <div class="reveal" style="margin-top:56px;margin-bottom:32px"><div class="sub-section-header"><iconify-icon icon="lucide:users" class="sub-section-icon"></iconify-icon><h3 class="sub-section-title">Leadership Experience</h3></div></div>
+  <div class="recognition-timeline">
+    <div class="recognition-item reveal"><div class="recognition-dot"></div><div class="card recognition-card"><div class="recognition-card-top"><div class="recognition-role">Deputy Office Secretary</div><div class="recognition-date-pill"><iconify-icon icon="lucide:calendar" style="font-size:.7rem"></iconify-icon> May 2023 – Jul 2024</div></div><div class="recognition-org"><iconify-icon icon="lucide:building-2" style="font-size:.85rem"></iconify-icon> UFTB Robotics Club</div><ul class="recognition-list"><li>Led intra-university robotics workshops and competitions</li><li>Managed collaborations with external tech communities and sponsors</li></ul></div></div>
+    <div class="recognition-item reveal"><div class="recognition-dot"></div><div class="card recognition-card"><div class="recognition-card-top"><div class="recognition-role">Executive Member</div><div class="recognition-date-pill"><iconify-icon icon="lucide:calendar" style="font-size:.7rem"></iconify-icon> Jul 2022 – Apr 2023</div></div><div class="recognition-org"><iconify-icon icon="lucide:building-2" style="font-size:.85rem"></iconify-icon> UFTB Programming Club</div><ul class="recognition-list"><li>Organized coding competitions, workshops, and hackathons</li><li>Developed mentoring content and promoted programming culture</li></ul></div></div>
+    <div class="recognition-item reveal"><div class="recognition-dot"></div><div class="card recognition-card"><div class="recognition-card-top"><div class="recognition-role">Organizing Secretary</div><div class="recognition-date-pill"><iconify-icon icon="lucide:calendar" style="font-size:.7rem"></iconify-icon> Sep 2021 – Feb 2023</div></div><div class="recognition-org"><iconify-icon icon="lucide:building-2" style="font-size:.85rem"></iconify-icon> Student Organization of Rangpur Division (GDU)</div><ul class="recognition-list"><li>Coordinated regional educational campaigns and leadership programs</li><li>Launched peer support initiatives that enhanced student involvement</li></ul></div></div>
+  </div>
+</section>
+
+<!-- CERTIFICATIONS -->
+<section class="section" id="certs">
+  <div class="reveal"><span class="section-label">Certifications</span><h2 class="section-title">Professional <span class="gradient-text">Credentials</span></h2></div>
+  <div class="cert-issuer-row reveal">
+    <div class="card cert-issuer-card"><div class="cert-issuer-banner"><div class="cert-issuer-logo aws"><iconify-icon icon="lucide:cloud"></iconify-icon></div><div class="cert-issuer-text"><div class="cert-issuer-name">Amazon Web Services</div><div class="cert-issuer-count">2 Certifications</div></div></div><div class="cert-issuer-body"><div class="cert-row"><span class="cert-row-name"><iconify-icon icon="lucide:check-circle"></iconify-icon> AWS Academy Introduction to Cloud Semester 1</span><span class="cert-row-date">Aug 2023</span></div><div class="cert-row"><span class="cert-row-name"><iconify-icon icon="lucide:check-circle"></iconify-icon> AWS Academy Introduction to Cloud Semester 2</span><span class="cert-row-date">Oct 2023</span></div></div></div>
+    <div class="card cert-issuer-card"><div class="cert-issuer-banner"><div class="cert-issuer-logo cisco"><iconify-icon icon="lucide:network"></iconify-icon></div><div class="cert-issuer-text"><div class="cert-issuer-name">Cisco Networking Academy</div><div class="cert-issuer-count">7 Certifications</div></div></div><div class="cert-issuer-body"><div class="cert-row"><span class="cert-row-name"><iconify-icon icon="lucide:check-circle"></iconify-icon> Introduction to Modern AI</span><span class="cert-row-date">Jun 2025</span></div><div class="cert-row"><span class="cert-row-name"><iconify-icon icon="lucide:check-circle"></iconify-icon> Introduction to Data Science</span><span class="cert-row-date">Jun 2025</span></div><div class="cert-row"><span class="cert-row-name"><iconify-icon icon="lucide:check-circle"></iconify-icon> Introduction to IoT</span><span class="cert-row-date">Jun 2025</span></div><div class="cert-row"><span class="cert-row-name"><iconify-icon icon="lucide:check-circle"></iconify-icon> Python Essentials 2</span><span class="cert-row-date">Jun 2025</span></div><div class="cert-row"><span class="cert-row-name"><iconify-icon icon="lucide:check-circle"></iconify-icon> Python Essentials 1</span><span class="cert-row-date">May 2025</span></div><div class="cert-row"><span class="cert-row-name"><iconify-icon icon="lucide:check-circle"></iconify-icon> Introduction to Cybersecurity</span><span class="cert-row-date">May 2025</span></div><div class="cert-row"><span class="cert-row-name"><iconify-icon icon="lucide:check-circle"></iconify-icon> Networking Basics</span><span class="cert-row-date">May 2025</span></div></div></div>
+    <div class="card cert-issuer-card" style="display:flex;flex-direction:column;justify-content:center;align-items:center;text-align:center;padding:32px !important"><div style="font-family:'Outfit',sans-serif;font-size:3.2rem;font-weight:700;letter-spacing:-0.03em;line-height:1" class="gradient-text">23</div><div style="font-size:.82rem;font-weight:600;margin-top:8px">Total Certifications</div><div style="font-size:.72rem;color:var(--text-secondary);margin-top:4px">Across 3 Issuers</div><div style="display:flex;gap:8px;margin-top:20px;justify-content:center"><span style="width:10px;height:10px;border-radius:50%;background:#FF9900"></span><span style="width:10px;height:10px;border-radius:50%;background:linear-gradient(135deg,#049FD9,#6CC04A)"></span><span style="width:10px;height:10px;border-radius:50%;background:linear-gradient(135deg,#00EA64,#00B4AB)"></span></div><div style="font-size:.62rem;color:var(--text-secondary);margin-top:12px;display:flex;flex-direction:column;gap:4px;align-items:center"><span>AWS · Cisco · HackerRank</span><span style="color:var(--accent-1);font-weight:600">Aug 2023 – Jul 2025</span></div></div>
+  </div>
+  <div class="card cert-hackerrank-card reveal">
+    <div class="cert-hr-banner"><div class="cert-hr-banner-left"><div class="cert-issuer-logo hackerrank"><iconify-icon icon="lucide:code-2"></iconify-icon></div><div class="cert-issuer-text"><div class="cert-issuer-name">HackerRank</div><div class="cert-issuer-count">14 Skill Certifications · Sep 2024 – Jul 2025</div></div></div></div>
+    <div class="cert-hr-body">
+      <div class="cert-featured"><div class="cert-featured-icon"><iconify-icon icon="lucide:briefcase"></iconify-icon></div><div class="cert-featured-info"><div class="cert-featured-title">Software Engineer Intern</div><div class="cert-featured-sub">Role Certification · Verified by HackerRank · Jan 2025</div></div><a href="https://www.hackerrank.com/certificates/8bcacd34e3ee" target="_blank" rel="noopener" class="cert-featured-badge" style="text-decoration:none">VIEW CERT</a></div>
+      <div class="cert-skill-groups">
+        <div><div class="cert-skill-group-label">Problem Solving & Algorithms</div><div class="cert-skill-badges"><span class="cert-skill-badge">Problem Solving <span class="cert-level basic">Basic</span></span><span class="cert-skill-badge">Problem Solving <span class="cert-level intermediate">Intermediate</span></span><span class="cert-skill-badge">REST API <span class="cert-level intermediate">Intermediate</span></span></div></div>
+        <div><div class="cert-skill-group-label">Programming Languages</div><div class="cert-skill-badges"><span class="cert-skill-badge">Python <span class="cert-level basic">Basic</span></span><span class="cert-skill-badge">JavaScript <span class="cert-level basic">Basic</span></span><span class="cert-skill-badge">JavaScript <span class="cert-level intermediate">Intermediate</span></span><span class="cert-skill-badge">Java <span class="cert-level basic">Basic</span></span><span class="cert-skill-badge">C# <span class="cert-level basic">Basic</span></span><span class="cert-skill-badge">R <span class="cert-level basic">Basic</span></span></div></div>
+        <div><div class="cert-skill-group-label">Databases & Web</div><div class="cert-skill-badges"><span class="cert-skill-badge">SQL <span class="cert-level basic">Basic</span></span><span class="cert-skill-badge">SQL <span class="cert-level intermediate">Intermediate</span></span><span class="cert-skill-badge">SQL <span class="cert-level advanced">Advanced</span></span><span class="cert-skill-badge">CSS <span class="cert-level basic">Basic</span></span></div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ════════ CONTACT — COMPACT ════════ -->
+<section class="section" id="contact">
+  <div class="reveal"><span class="section-label">Contact</span><h2 class="section-title">Let's <span class="gradient-text">Connect</span></h2></div>
+  <div class="contact-grid">
+
+    <!-- LEFT: Compact info -->
+    <div class="card contact-info-card reveal">
+      <p class="contact-intro">Open to research collaborations, project opportunities, or exchanging ideas about tech & social impact.</p>
+      <div class="contact-links">
+        <a href="mailto:shakilahmed4024@gmail.com" target="_blank" rel="noopener" class="contact-link"><iconify-icon icon="lucide:mail"></iconify-icon><span class="contact-link-text">shakilahmed4024@gmail.com</span></a>
+        <a href="https://wa.me/8801718089355" target="_blank" rel="noopener" class="contact-link"><iconify-icon icon="lucide:message-circle"></iconify-icon><span class="contact-link-text">+880 1718 089 355</span></a>
+        <a href="https://maps.app.goo.gl/6H3FAZAWogMro5Qm6" target="_blank" rel="noopener" class="contact-link"><iconify-icon icon="lucide:map-pin"></iconify-icon><span class="contact-link-text">Dhaka, Bangladesh</span></a>
+      </div>
+      <div class="contact-divider"></div>
+      <div class="contact-links">
+        <a href="https://www.linkedin.com/in/shakil-ahmed-21a04922b/" target="_blank" rel="noopener" class="contact-link"><iconify-icon icon="lucide:linkedin"></iconify-icon><span class="contact-link-text">Linked-In</span></a>
+        <a href="https://github.com/meetshaks" target="_blank" rel="noopener" class="contact-link"><iconify-icon icon="lucide:github"></iconify-icon><span class="contact-link-text">GitHub</span></a>
+        <a href="https://www.hackerrank.com/profile/shakilahmed4024" target="_blank" rel="noopener" class="contact-link"><iconify-icon icon="lucide:trophy"></iconify-icon><span class="contact-link-text">Hacker-Rank</span></a>
+        <a href="https://www.credly.com/users/md-shakil-mia.itz-shaks" target="_blank" rel="noopener" class="contact-link"><iconify-icon icon="lucide:award"></iconify-icon><span class="contact-link-text">Credly</span></a>
+      </div>
+      <div class="contact-langs">
+        <span class="contact-lang"><iconify-icon icon="lucide:languages"></iconify-icon> Bengali</span>
+        <span class="contact-lang"><iconify-icon icon="lucide:languages"></iconify-icon> English</span>
+        <span class="contact-lang"><iconify-icon icon="lucide:languages"></iconify-icon> Hindi</span>
+      </div>
+    </div>
+
+    <!-- RIGHT: Form -->
+    <div class="card contact-form reveal">
+      <form id="contactForm">
+        <div class="form-group"><label>Your Name</label><input type="text" class="form-input" placeholder="John Doe" required></div>
+        <div class="form-group"><label>Email Address</label><input type="email" class="form-input" placeholder="john@example.com" required></div>
+        <div class="form-group"><label>Subject</label><input type="text" class="form-input" placeholder="Let's collaborate!"></div>
+        <div class="form-group"><label>Message</label><textarea class="form-input" placeholder="Tell me about your project or idea..."></textarea></div>
+        <button type="submit" class="btn-primary" style="width:100%;justify-content:center">Send Message <iconify-icon icon="lucide:send"></iconify-icon></button>
+        <div id="formMsg" style="text-align:center;margin-top:12px;font-size:.82rem;color:var(--accent-1);display:none"></div>
+      </form>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="footer-links">
+    <a href="mailto:shakilahmed4024@gmail.com"><iconify-icon icon="lucide:mail"></iconify-icon> Email</a>
+    <a href="https://www.linkedin.com/in/shakil-ahmed-21a04922b/" target="_blank" rel="noopener"><iconify-icon icon="lucide:linkedin"></iconify-icon> LinkedIn</a>
+    <a href="https://github.com/meetshaks" target="_blank" rel="noopener"><iconify-icon icon="lucide:github"></iconify-icon> GitHub</a>
+    <a href="https://www.hackerrank.com/profile/shakilahmed4024" target="_blank" rel="noopener"><iconify-icon icon="lucide:trophy"></iconify-icon> Hacker-Rank</a>
+  </div>
+  <p>© 2026 MD. Shakil Ahmed.</p>
+</footer>
+
+<button class="back-to-top" id="backToTop" aria-label="Back to top"><iconify-icon icon="lucide:arrow-up"></iconify-icon></button>
+
+<script>
+const html=document.documentElement,themeToggle=document.getElementById('themeToggle'),themeIcon=document.getElementById('themeIcon');
+const saved=localStorage.getItem('theme');if(saved)html.setAttribute('data-theme',saved);updateIcon();
+themeToggle.addEventListener('click',()=>{const c=html.getAttribute('data-theme'),n=c==='dark'?'light':'dark';html.setAttribute('data-theme',n);localStorage.setItem('theme',n);updateIcon()});
+function updateIcon(){themeIcon.setAttribute('icon',html.getAttribute('data-theme')==='dark'?'lucide:moon':'lucide:sun')}
+const glow=document.getElementById('cursor-glow');let mX=-500,mY=-500,gX=-500,gY=-500;
+document.addEventListener('mousemove',e=>{mX=e.clientX;mY=e.clientY});
+(function a(){gX+=(mX-gX)*.12;gY+=(mY-gY)*.12;glow.style.left=gX+'px';glow.style.top=gY+'px';requestAnimationFrame(a)})();
+const reveals=document.querySelectorAll('.reveal'),ro=new IntersectionObserver(e=>{e.forEach(en=>{if(en.isIntersecting)en.target.classList.add('visible')})},{threshold:.08,rootMargin:'0px 0px -40px 0px'});
+reveals.forEach(el=>ro.observe(el));
+const secs=document.querySelectorAll('section[id]'),nls=document.querySelectorAll('.nav-links a');
+function uAN(){let c='';secs.forEach(s=>{if(window.scrollY>=s.offsetTop-120)c=s.id});nls.forEach(l=>{l.classList.remove('active');if(l.getAttribute('href')==='#'+c)l.classList.add('active')})}
+window.addEventListener('scroll',uAN);uAN();
+const mn=document.getElementById('mainNav');window.addEventListener('scroll',()=>{mn.classList.toggle('scrolled',window.scrollY>60)});
+const btt=document.getElementById('backToTop');window.addEventListener('scroll',()=>{btt.classList.toggle('show',window.scrollY>500)});
+btt.addEventListener('click',()=>window.scrollTo({top:0,behavior:'smooth'}));
+const mo=document.getElementById('mobileOverlay');
+document.getElementById('mobileMenuBtn').addEventListener('click',()=>mo.classList.add('open'));
+document.getElementById('mobileClose').addEventListener('click',closeNav);
+function closeNav(){mo.classList.remove('open')}
+document.getElementById('contactForm').addEventListener('submit',function(e){e.preventDefault();const m=document.getElementById('formMsg');m.textContent='✓ Message sent successfully!';m.style.display='block';this.reset();setTimeout(()=>{m.style.display='none'},4000)});
+</script>
+</body>
+</html>
